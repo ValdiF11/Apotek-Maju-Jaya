@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Maju Jaya Apotek</title>
+  </head>
+  <body>
+    <div class="blur">
+      <div class="todo-container">
+        <div class="nama-apotek">
+          <img class="image" src="pngwing.com.png" alt="logo-apotek" />
+          <div><h1>MAJU JAYA APOTEK</h1></div>
+        </div>
+        <div class="todo-box" style="margin-bottom: 20px">
+          <form id="formTambahItem">
+            <label for="item" class="label">Nama Obat: </label>
+            <input type="text" id="item-name" required />
+            <label for="item" class="label">Kategori: </label>
+            <input type="text" id="category" required />
+            <label for="item" class="label">Stok awal: </label>
+            <input type="number" id="item-stock" required />
+            <label for="harga" class="label">Harga: </label>
+            <input type="number" id="price" required />
+            <button type="button" onclick="tambahItem()">Tambah Item</button>
+          </form>
+        </div>
+        <audio id="myAudio" src="./assets/rugi-dong-yang-bener-aje.mp3"></audio>
+        <div class="todo-box">
+          <h2>Daftar Obat-Obat Di Stok</h2>
+          <table id="tableContainer">
+            <tr class="header-tabel">
+              <td>Nama Obat</td>
+              <td>Kategori</td>
+              <td>Stok</td>
+              <td>Harga Barang</td>
+              <td>Atur Jumlah Stok</td>
+              <td>Hapus Obat</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

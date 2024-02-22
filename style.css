@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("7283494.jpg");
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+form {
+  /* min-height: 20vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0px;
+  font-size: 90%;
+  color: black;
+  font-weight: bold;
+}
+
+.input-box {
+  width: 40%;
+  background-color: white;
+  /* padding: 15px; */
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+.form-input-text {
+  width: 48%;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 100%;
+  border: none;
+  background: whitesmoke;
+  border-radius: 0.4rem;
+}
+
+form button {
+  color: white;
+  background: #dc3246;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.4rem;
+  margin-left: 1%;
+}
+
+button:hover {
+  background: orange;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.todo-box {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.623);
+  margin-top: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+
+.todo-box h2 {
+  color: rgba(2, 9, 24, 0.8);
+  line-height: 2.25rem;
+  margin: 0.2rem 1rem;
+  padding: 2rem 0.5rem;
+  font-weight: 500;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.header-tabel {
+  font-weight: bold;
+}
+.table-container {
+  overflow-x: auto;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%; /* Atur lebar sesuai kebutuhan */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+td {
+  border: 1px solid #222121;
+  text-align: center;
+  font-size: large;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  cursor: pointer;
+}
+
+form button {
+  color: white;
+  background: teal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.4rem;
+  margin-left: 1%;
+}
+
+button:hover {
+  background: deepskyblue;
+}
+
+.nama-apotek {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.image {
+  width: 60px;
+}
+
+td {
+  width: 15%;
+}
+
+h1 {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.buttonPlusMinus button {
+  padding: 4% 8%;
+  font-size: 100%;
+  border: 5px;
+  background: rgba(64, 224, 208, 0.356);
+  border-radius: 0.4rem;
+  margin: 3px 4px;
+  transition: all 0.3s ease;
+}
+
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  background: rgba(224, 64, 64, 0.356);
+  border-radius: 0.4rem;
+  transition: all 0.1s ease;
+}
+
+.delete-button:hover {
+  background: red;
+  transition: all 0.3s ease;
+}
+
+#formTambahItem {
+  display: block;
+}
