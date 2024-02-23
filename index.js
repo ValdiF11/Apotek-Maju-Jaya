@@ -46,14 +46,22 @@ function loadTableMedicines() {
     row.innerHTML = `
       <td>${medicines[i].name}</td>
       <td class="kategori-obat">${medicines[i].category}</td>
-      <td><span id="${medicines[i].name.toLowerCase()}-stock">${medicines[i].stock}</span></td>
+      <td><span id="${medicines[i].name.toLowerCase()}-stock">${
+      medicines[i].stock
+    }</span></td>
       <td class="harga obat">${medicines[i].harga}</td>
       <td class="buttonPlusMinus">
-        <button onclick="decreaseStock('${medicines[i].name.toLowerCase()}')">-</button>
-        <button onclick="increaseStock('${medicines[i].name.toLowerCase()}')">+</button>
+        <button onclick="decreaseStock('${medicines[
+          i
+        ].name.toLowerCase()}')">-</button>
+        <button onclick="increaseStock('${medicines[
+          i
+        ].name.toLowerCase()}')">+</button>
       </td>
       <td id="${medicines[i].name}-delete">
-        <button  class="delete-button" onClick="deleteItem('${medicines[i].name}')"><p>Hapus</p></button>
+        <button  class="delete-button" onClick="deleteItem('${
+          medicines[i].name
+        }')"><p>Hapus</p></button>
       </td>
     `;
     // Append row to table
@@ -70,12 +78,18 @@ function tambahItem() {
     stock: document.getElementById("item-stock").value,
   };
 
-  if (!document.getElementById("item-name").value || document.getElementById("item-name").value.trim().length === 0) {
+  if (
+    !document.getElementById("item-name").value ||
+    document.getElementById("item-name").value.trim().length === 0
+  ) {
     window.alert("Nama obatnya masih kosong bos :)");
     return;
   }
 
-  if (!document.getElementById("category").value || document.getElementById("category").value.trim().length === 0) {
+  if (
+    !document.getElementById("category").value ||
+    document.getElementById("category").value.trim().length === 0
+  ) {
     window.alert("Kategorinya lupa kah manis?");
     return;
   }
@@ -89,7 +103,10 @@ function tambahItem() {
     return;
   }
 
-  if (!document.getElementById("item-stock").value || document.getElementById("item-stock").value.trim().length === 0) {
+  if (
+    !document.getElementById("item-stock").value ||
+    document.getElementById("item-stock").value.trim().length === 0
+  ) {
     window.alert("Stocknya ga bisa kosong ya kak");
     return;
   }
@@ -105,23 +122,35 @@ function tambahItem() {
   row.innerHTML = `
       <td>${newMedicine.name}</td>
       <td class="kategori-obat">${newMedicine.category}</td>
-      <td><span id="${newMedicine.name.toLowerCase()}-stock">${newMedicine.stock}</span></td>
+      <td><span id="${newMedicine.name.toLowerCase()}-stock">${
+    newMedicine.stock
+  }</span></td>
       <td class="harga obat">${newMedicine.harga}</td>
       <td class="buttonPlusMinus">
         <button onclick="decreaseStock('${newMedicine.name.toLowerCase()}')">-</button>
         <button onclick="increaseStock('${newMedicine.name.toLowerCase()}')">+</button>
       </td>
       <td id="${newMedicine.name}-delete">
-        <button class="delete-button" onClick="deleteItem('${newMedicine.name}')"><p>Hapus</p></button>
+        <button class="delete-button" onClick="deleteItem('${
+          newMedicine.name
+        }')"><p>Hapus</p></button>
       </td>
     `;
   document.getElementById("tableContainer").appendChild(row);
+
+  document.getElementById("item-name").value = "";
+  document.getElementById("category").value = "";
+  document.getElementById("price").value = "";
+  document.getElementById("item-stock").value = "";
 }
 
 function itemValidation(newMedicine) {
   console.log(medicines);
   for (let i = 0; i < medicines.length; i++) {
-    if (medicines[i] && newMedicine.name.toLowerCase() === medicines[i].name.toLocaleLowerCase()) {
+    if (
+      medicines[i] &&
+      newMedicine.name.toLowerCase() === medicines[i].name.toLocaleLowerCase()
+    ) {
       window.alert("Obat sudah ada di dalam daftar stock!");
       return false;
     }
