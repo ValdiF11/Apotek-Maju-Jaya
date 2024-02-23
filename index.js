@@ -149,7 +149,7 @@ function itemValidation(newMedicine) {
   for (let i = 0; i < medicines.length; i++) {
     if (
       medicines[i] &&
-      newMedicine.name.toLowerCase() === medicines[i].name.toLocaleLowerCase()
+      newMedicine.name.toLowerCase() === medicines[i].name.toLowerCase()
     ) {
       window.alert("Obat sudah ada di dalam daftar stock!");
       return false;
