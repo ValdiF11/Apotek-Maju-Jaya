@@ -15,6 +15,7 @@ function decreaseStock(obat) {
 }
 
 // Create a table element
+
 let medicines = [
   {
     name: "Paracetamol",
