@@ -85,7 +85,6 @@ function tambahItem() {
     document.getElementById("price").value < 1
   ) {
     playSound();
-    window.alert("Gak ada harga? Rugi dongg!!!");
     return;
   }
 
@@ -144,11 +143,8 @@ function deleteItem(medicine) {
 var audio = document.getElementById("myAudio");
 
 function playSound() {
+  audio.play();
   setTimeout(function () {
-    audio.play();
-    setTimeout(function () {
-      audio.pause();
-      audio.currentTime = 0;
-    }, 3500);
-  }, 0);
+    window.alert("Gak ada harga? Rugi dongg!!!");
+  }, 500);
 }
