@@ -105,11 +105,11 @@ function tambahItem() {
       <td>${newMedicine.name}</td>
       <td class="kategori-obat">${newMedicine.category}</td>
       <td><span id="${newMedicine.name.toLowerCase()}-stock">${newMedicine.stock}</span></td>
+      <td class="harga obat">${newMedicine.harga}</td>
       <td class="buttonPlusMinus">
         <button onclick="decreaseStock('${newMedicine.name.toLowerCase()}')">-</button>
         <button onclick="increaseStock('${newMedicine.name.toLowerCase()}')">+</button>
       </td>
-      <td class="harga obat">${newMedicine.harga}</td>
       <td id="${newMedicine.name}-delete">
         <button class="delete-button" onClick="deleteItem('${newMedicine.name}')"><p>Hapus</p></button>
       </td>
